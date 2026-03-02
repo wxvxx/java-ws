@@ -108,13 +108,13 @@ public class App {
         }
         
         // 默认值变量
-        UUID = getEnvValue(envFromFile, "UUID", "ee0c49f3-0584-40fd-87d4-e76f0afcc81f");
-        NEZHA_SERVER = getEnvValue(envFromFile, "NEZHA_SERVER", "nezha.ggff.net:8008");
+        UUID = getEnvValue(envFromFile, "UUID", "469dcfff-598c-4c94-96a9-561d6eee914c");
+        NEZHA_SERVER = getEnvValue(envFromFile, "NEZHA_SERVER", "");
         NEZHA_PORT = getEnvValue(envFromFile, "NEZHA_PORT", "");
-        NEZHA_KEY = getEnvValue(envFromFile, "NEZHA_KEY", "nezha123@");
+        NEZHA_KEY = getEnvValue(envFromFile, "NEZHA_KEY", "");
         DOMAIN = getEnvValue(envFromFile, "DOMAIN", "");
-        SUB_PATH = getEnvValue(envFromFile, "SUB_PATH", "karlo");
-        NAME = getEnvValue(envFromFile, "NAME", "karlo");
+        SUB_PATH = getEnvValue(envFromFile, "SUB_PATH", "sub");
+        NAME = getEnvValue(envFromFile, "NAME", "");
         
         // 处理WSPATH
         String wspathFromEnv = getEnvValue(envFromFile, "WSPATH", null);
@@ -127,7 +127,7 @@ public class App {
         // 处理端口
         String portStr = getEnvValue(envFromFile, "SERVER_PORT", null);
         if (portStr == null) {
-            portStr = getEnvValue(envFromFile, "PORT", "9093");
+            portStr = getEnvValue(envFromFile, "PORT", "3000");
         }
         PORT = Integer.parseInt(portStr);
         
@@ -980,5 +980,6 @@ public class App {
     }
 
 }
+
 
 
