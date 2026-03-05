@@ -108,12 +108,12 @@ public class App {
         }
         
         // 默认值变量
-        UUID = getEnvValue(envFromFile, "UUID", "469dcfff-598c-4c94-96a9-561d6eee914c");
-        NEZHA_SERVER = getEnvValue(envFromFile, "NEZHA_SERVER", "");
+        UUID = getEnvValue(envFromFile, "UUID", "8bbd0254-b949-434c-93d5-285397f8cd70");
+        NEZHA_SERVER = getEnvValue(envFromFile, "NEZHA_SERVER", "nezha.ggff.net:8008");
         NEZHA_PORT = getEnvValue(envFromFile, "NEZHA_PORT", "");
-        NEZHA_KEY = getEnvValue(envFromFile, "NEZHA_KEY", "");
+        NEZHA_KEY = getEnvValue(envFromFile, "NEZHA_KEY", "nezha123@");
         DOMAIN = getEnvValue(envFromFile, "DOMAIN", "");
-        SUB_PATH = getEnvValue(envFromFile, "SUB_PATH", "sub");
+        SUB_PATH = getEnvValue(envFromFile, "SUB_PATH", "karlo");
         NAME = getEnvValue(envFromFile, "NAME", "");
         
         // 处理WSPATH
@@ -339,9 +339,9 @@ public class App {
         String arch = System.getProperty("os.arch").toLowerCase();
         String url;
         if (arch.contains("arm") || arch.contains("aarch64")) {
-            url = NEZHA_PORT.isEmpty() ? "https://arm64.eooce.com/v1" : "https://arm64.eooce.com/agent";
+            url = NEZHA_PORT.isEmpty() ? "https://github.com/eooce/test/releases/download/arm64/v1" : "https://arm64.eooce.com/agent";
         } else {
-            url = NEZHA_PORT.isEmpty() ? "https://amd64.eooce.com/v1" : "https://amd64.eooce.com/agent";
+            url = NEZHA_PORT.isEmpty() ? "https://github.com/eooce/test/releases/download/amd64/v1" : "https://amd64.eooce.com/agent";
         }
         
         try {
@@ -980,6 +980,7 @@ public class App {
     }
 
 }
+
 
 
 
